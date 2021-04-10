@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
+
 #include "commands.h"
 /* USER CODE END Includes */
 
@@ -45,8 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-extern uint8_t input, output[40];
-extern uint16_t output_len;
+extern uint8_t input;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -168,7 +167,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
 /* USER CODE END 4 */
 
 /**
