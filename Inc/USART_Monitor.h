@@ -1,12 +1,12 @@
 /*
- * commands.h
+ * USART_Monitor.h
  *
  *  Created on: 8 kwi 2021
- *      Author: polch
+ *      Author: Krzysztof Półchłopek
  */
 
-#ifndef INC_COMMANDS_H_
-#define INC_COMMANDS_H_
+#ifndef INC_USART_MONITOR_H_
+#define INC_USART_MONITOR_H_
 
 #include "stm32l4xx_hal.h"
 #include "main.h"
@@ -15,10 +15,12 @@
 
 #define COMMAND_MAX_LENGTH 50
 #define OUTPUT_MAX_LENGTH 100
+#define USED_USART USART2
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
 
+void Monitor_Init(void);
 void analyze(char input);
 void check_command(char* command);
 
-#endif /* INC_COMMANDS_H_ */
+#endif /* INC_USART_MONITOR_H_ */
