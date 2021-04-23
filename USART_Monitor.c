@@ -75,7 +75,7 @@ void check_command(char* command)
 		HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
 		output_len = sprintf((char*) output, "\n\rDiode was turned OFF\n\r");
 	} else if (strcmp(command,"/get_temp") == 0) {
-		output_len = sprintf((char*) output, "\n\rTemp: %.1f %cC\n\r",*data.f1, (char)176);
+		output_len = sprintf((char*) output, "\n\rTemp: %.1f C\n\r",*data.f1);
 	} else if (strcmp(command,"/get_hum") == 0) {
 		output_len = sprintf((char*) output, "\n\rHum: %.1f %%RH\n\r",*data.f2);
 	} else {
